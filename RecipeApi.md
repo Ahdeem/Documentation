@@ -18,10 +18,23 @@ This documentation is intended for developers who want to integrate recipe manag
      + Scenario 1: Unique username:
        ![Scenario1](./RegisteredUser1.jpg)
 
-     + Scenarion 2: When an existing username is provided:
-       ![Scenario1](./RegisteredUser2.jpg)
+     + Scenario 2: When an existing username is provided:
+       ![Scenario2](./RegisteredUser2.jpg)
 
-2. 
+2. Add a new recipe
+    - EndPoint: /api/recipe/add-recipe
+    - Method: POST
+    - Parameters: Only one parameter is required and that is the userId
+    - Description: Creates a new recipe as entered by a registered user.
+    - Request:
+        ![SampleRequest](./AddRecipeRequestHappyFlow.jpg)
+    - Response:
+        + Scenario 1 : Attempt to create a recipe with a registered user
+          ![HappyFlow](./AddRecipeResponseHappy.jpg)
+        + + Scenario 2 : Attempt to create a recipe with an uregistered user
+          ![NonHappyFlow](./AddRecipeResponseNonHappy.jpg)
+
+3. Delete Recipe
 
 ```
 

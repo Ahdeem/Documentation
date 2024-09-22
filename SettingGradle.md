@@ -39,10 +39,12 @@ In simple terms, Gradle is a build tool used to automate the building, testing, 
   **I recommend selecting "basic" as the build type, as it serves as a solid foundation for further development.**
 
   ![Gradle_BuildScript](./GradleBuildScript.jpg)
+  
   **Your choice here mainly depends on what domain specific language you are familiar with.** 
 
 + After that is done you should now have an initial set up that should look like this:
   ![Gradle_Setup](./Gradle_Project_after_init.jpg)
+  
   A variety of Gradle files will be generated; however, the most important ones are build.gradle.kts, settings.gradle.kts, the .gradle directory, and the Gradle wrapper. The build.gradle file is the main build configuration file for the project, where most of the build settings will reside. The settings.gradle file contains settings that Gradle reads before starting your build (for instance, the root project name). The Gradle wrapper ensures everyone working with the project is using the same version of Gradle.
   
 ---

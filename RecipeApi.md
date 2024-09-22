@@ -78,12 +78,12 @@ This documentation is intended for developers who want to integrate recipe manag
 
           
 ## Common Error Codes:
+
 | Error Code       | Description                                |
 |------------------|--------------------------------------------|
-| 401 Unauthorized | The user is not authenticated              |
-| 404 Not Found    | The requested resource could not be found. | 
-| 409 Conflict     | Resource already exist.                    | 
-
+| 401 Unauthorized | The user is not authenticated.             |
+| 404 Not Found    | The requested resource could not be found. |
+| 409 Conflict     | The resource already exist.                |
 
 
 ## Further Information:

@@ -14,8 +14,8 @@ This documentation is intended for developers who want to integrate recipe manag
 1. Register a user
    - EndPoint: /api/recipe/register-user
    - Method: POST
-   - Path parameters: There are two required parameters: Name and Password
-   - Description: Creates a new user account to access the recipe API
+   - Path parameters: There are two required parameters for this endpoint: name and password.
+   - Description: Creates a new user account to access the recipe API.
    - Response:
      + Scenario 1: Unique username:
        ![Scenario1](./RegisteredUser1.jpg)
@@ -26,7 +26,7 @@ This documentation is intended for developers who want to integrate recipe manag
 2. Add a new recipe
     - EndPoint: /api/recipe/add-recipe
     - Method: POST
-    - Path parameters: Only one parameter is required and that is the userId
+    - Path parameters: Only one parameter is required and that is the userId.
     - Description: Creates a new recipe as entered by a registered user.
     - Request:
         ![SampleRequest](./AddRecipeRequestHappyFlow.jpg)
@@ -39,7 +39,7 @@ This documentation is intended for developers who want to integrate recipe manag
 3. Update an existing recipe
     - EndPoint: /api/recipe/update-recipe-details
     - Method: PATCH
-    - Path parameters: Only two parameters are required and that is the userId, and 
+    - Path parameters: Only two parameters are required: the userId and 
       the name of recipe to be updated.
     - Description: Registered users can update recipes they have added.
     - Request:
@@ -47,22 +47,21 @@ This documentation is intended for developers who want to integrate recipe manag
     - Response:
       + Scenario 1 : Attempt to update an existing recipe.
         ![HappyFlowUpdate](./SuccesfulUpdate.jpg)
-      + Scenario 2 : Attempt to update a non existing recipe.
+      + Scenario 2 : Attempt to update a recipe that does not exist.
         ![NonHappyFlowUpdate](./UpdateRecipeNotExisting.jpg)
 
 4. Find recipe based on name
     - EndPoint: /api/recipe/get-recipe
     - Method: GET
-    - Path parameters: Only two parameters are required and that is the userId, and
+    - Path parameters: Only two parameters are required: the userId and
       the name of recipe.
     - Description: Registered users can find recipes that have been added either by them
       or other registered users.
     - Response:
         + Scenario 1 : Attempt to find an existing recipe.
           ![HappyFlowFindRecipe](./SearchForRecipeByName.jpg)
-        + Scenario 2 : Attempt to find a non-existing recipe.
+        + Scenario 2 : Attempt to find a recipe that does not exist.
           ![NonHappyFlowFindRecipe](./NonExistentRecipe.jpg)
-        
 
 5.  Delete Recipe
     - EndPoint: /api/recipe/delete

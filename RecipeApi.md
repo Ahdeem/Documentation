@@ -4,7 +4,7 @@
 **Git Project URL:** `https://github.com/bernardAppah/recipeApi`
 
 ## Introduction
-The Recipe API platform provides a set of endpoints for registered users to manage and explore recipes. Users can add new recipes, filter recipes based on various criteria, update existing recipes, and delete recipes.
+The Recipe API platform provides a set of endpoints for registered users to manage and explore recipes. Users can add new recipes, find recipes based on name, update existing recipes, and delete recipes.
 
 This documentation is intended for developers who want to integrate recipe management capabilities into their applications.
 
@@ -29,12 +29,52 @@ This documentation is intended for developers who want to integrate recipe manag
     - Request:
         ![SampleRequest](./AddRecipeRequestHappyFlow.jpg)
     - Response:
-        + Scenario 1 : Attempt to create a recipe with a registered user
-          ![HappyFlow](./AddRecipeResponseHappy.jpg)
-        + + Scenario 2 : Attempt to create a recipe with an uregistered user
-          ![NonHappyFlow](./AddRecipeResponseNonHappy.jpg)
+      + Scenario 1 : Attempt to create a recipe with a registered user
+        ![HappyFlow](./AddRecipeResponseHappy.jpg)
+      + Scenario 2 : Attempt to create a recipe with an unregistered user
+        ![NonHappyFlow](./AddRecipeResponseNonHappy.jpg)
 
-3. Delete Recipe
+3. Update an existing recipe
+    - EndPoint: /api/recipe/update-recipe-details
+    - Method: PATCH
+    - Parameters: Only two parameters are required and that is the userId, and 
+      the name of recipe to be updated.
+    - Description: Registered users can update recipes they have added.
+    - Request:
+         ![SampleRequestUpdate](./SampleUpdateRequest.jpg)
+    - Response:
+      + Scenario 1 : Attempt to update an existing recipe.
+        ![HappyFlowUpdate](./SuccesfulUpdate.jpg)
+      + Scenario 2 : Attempt to update a non existing recipe.
+        ![NonHappyFlowUpdate](./UpdateRecipeNotExisting.jpg)
+
+4. Find recipe based on name
+    - EndPoint: /api/recipe/get-recipe
+    - Method: GET
+    - Parameters: Only two parameters are required and that is the userId, and
+      the name of recipe.
+    - Description: Registered users can find recipes that have been added either by them
+      or other registered users.
+    - Response:
+        + Scenario 1 : Attempt to find an existing recipe.
+          ![HappyFlowFindRecipe](./SearchForRecipeByName.jpg)
+        + Scenario 2 : Attempt to find a non-existing recipe.
+          ![NonHappyFlowFindRecipe](./NonExistentRecipe.jpg)
+        
+
+5.  Delete Recipe
+    - EndPoint: /api/recipe/delete
+    - Method: DELETE
+    - Parameters: Only one parameter is required and that is the userId.
+    - Description: Deletes an existing recipe. A registered user can only delete recipes, 
+      if it was added by them.
+    - Request: As part of the request body, only the name of recipe is required.
+        ![SampleRequestForDelete](./DeleteRecipeRequest.jpg)
+    - Response:
+        + Scenario 1 : Attempt to delete a recipe as the registered user who created it
+          ![SuccessDelete](./SucessfullyDeleted.jpg)
+        + Scenario 2 : Attempt to delete a recipe as a registered user who did not create it.
+          ![NoSuccessWithDelete](./DeleteUnsucessful.jpg)
 
 ```
 

@@ -1,7 +1,7 @@
 # Recipe API Documentation
 
 **Version:** 1.0  
-**Git Project URL:** `https://github.com/bernardAppah/recipeApi`
+**Git Project URL:** https://github.com/bernardAppah/recipeApi
 
 ## Introduction
 The Recipe API platform provides a set of endpoints for registered users to manage and explore recipes. Users can add new recipes, find recipes based on name, update existing recipes, and delete recipes.
@@ -12,7 +12,7 @@ This documentation is intended for developers who want to integrate recipe manag
 1. Register a user
    - EndPoint: /api/recipe/register-user
    - Method: POST
-   - Parameters: There are two required parameters: Name and Password
+   - Path parameters: There are two required parameters: Name and Password
    - Description: Creates a new user account to access the recipe API
    - Response:
      + Scenario 1: Unique username:
@@ -24,7 +24,7 @@ This documentation is intended for developers who want to integrate recipe manag
 2. Add a new recipe
     - EndPoint: /api/recipe/add-recipe
     - Method: POST
-    - Parameters: Only one parameter is required and that is the userId
+    - Path parameters: Only one parameter is required and that is the userId
     - Description: Creates a new recipe as entered by a registered user.
     - Request:
         ![SampleRequest](./AddRecipeRequestHappyFlow.jpg)
@@ -37,7 +37,7 @@ This documentation is intended for developers who want to integrate recipe manag
 3. Update an existing recipe
     - EndPoint: /api/recipe/update-recipe-details
     - Method: PATCH
-    - Parameters: Only two parameters are required and that is the userId, and 
+    - Path parameters: Only two parameters are required and that is the userId, and 
       the name of recipe to be updated.
     - Description: Registered users can update recipes they have added.
     - Request:
@@ -51,7 +51,7 @@ This documentation is intended for developers who want to integrate recipe manag
 4. Find recipe based on name
     - EndPoint: /api/recipe/get-recipe
     - Method: GET
-    - Parameters: Only two parameters are required and that is the userId, and
+    - Path parameters: Only two parameters are required and that is the userId, and
       the name of recipe.
     - Description: Registered users can find recipes that have been added either by them
       or other registered users.
@@ -75,6 +75,22 @@ This documentation is intended for developers who want to integrate recipe manag
           ![SuccessDelete](./SucessfullyDeleted.jpg)
         + Scenario 2 : Attempt to delete a recipe as a registered user who did not create it.
           ![NoSuccessWithDelete](./DeleteUnsucessful.jpg)
+
+          
+## Common Error Codes:
+| Error Code       | Description                                |
+|------------------|--------------------------------------------|
+| 401 Unauthorized | The user is not authenticated              |
+| 404 Not Found    | The requested resource could not be found. | 
+| 409 Conflict     | Resource already exist.                    | 
+
+
+
+## Further Information:
+For further information about this API, After starting the application, assuming its
+running on your localhost go to the url below to view the available endpoints.
+
+http://localhost:8081/swagger-ui/index.html
 
 ```
 

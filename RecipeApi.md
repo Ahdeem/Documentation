@@ -1,7 +1,7 @@
 # Recipe API Documentation
 
 **Version:** 1.0  
-**Git Project URL:** https://github.com/bernardAppah/recipeApi
+**Git Project URL:** [RecipeApi](https://github.com/bernardAppah/recipeApi)
 
 ## Introduction
 The Recipe API platform provides a set of endpoints for registered users to manage and explore recipes. Users can add new recipes, find recipes based on name, update existing recipes, and delete recipes.
@@ -65,7 +65,7 @@ This documentation is intended for developers who want to integrate recipe manag
 5.  Delete Recipe
     - EndPoint: /api/recipe/delete
     - Method: DELETE
-    - Parameters: Only one parameter is required and that is the userId.
+    - Path parameters: Only one parameter is required and that is the userId.
     - Description: Deletes an existing recipe. A registered user can only delete recipes, 
       if it was added by them.
     - Request: As part of the request body, only the name of recipe is required.
@@ -90,9 +90,7 @@ This documentation is intended for developers who want to integrate recipe manag
 For further information about this API, After starting the application, assuming its
 running on your localhost go to the url below to view the available endpoints.
 
-http://localhost:8081/swagger-ui/index.html
-
 ```
-
+http://localhost:8081/swagger-ui/index.html
 ```
 

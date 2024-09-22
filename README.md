@@ -14,7 +14,7 @@ Explore my portfolio to see a selection of the technical documentation I've crea
 
 ## Below you can find samples of my documentation:
 - [Api Documentation Sample](RecipeApi.md)
-- [Active Link2](anotherOne.md)
+- [Tutorial Sample](SettingGradle.md)
 
 ---
 

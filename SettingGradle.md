@@ -2,9 +2,9 @@
 
 # Table of Contents
 - [Overview](#overview)
-- [Step-by-Step guide](#step-by-Step-Guide)
+- [Step-by-Step guide](#step-by-step-guide)
 - [Common troubles](#common-troubles)
-- [Further Studies](#further-Studies)
+- [Further Studies](#further-studies)
 
 ## Overview
 This guide would illustrate how to set up a gradle project from scratch without any
@@ -36,9 +36,38 @@ for modern frameworks.
      ```
     cd my_new_gradle_project
     ```
++ Initialise the gradle project as this would help set up the build files
+  ```
+  gradle init
+    ```
+  As part of running this command, you will have to answer a few questions. Usually pertaining
+  to the type of project for you and the build script DSL
+  ![Gradle_BuildType](./Gradle_buildType.jpg)
+  **I would recommend selecting basic as build type as it forms a basis for which you can build on.**
+
+  ![Gradle_BuildScript](./GradleBuildScript.jpg)
+  **Your choice here majorly depends on what domain specific language you are familiar with.** 
+
++ After that is done you should now have an initial set up that should look like this:
+  ![Gradle_Setup](./Gradle_Project_after_init.jpg)
+  There are a ton of gradle files generated, however the most important ones are the build.gradle.kts,
+  settings.gradle.kts, the .gradle directory and the gradle wrapper. The **build.gradle** is the main build 
+  file for the project and this is the place where most of the build configuration will end up. 
+  The **setting.gradle** contains settings that Gradle reads before actually starting your build (for instance,
+  the root project name goes here). The **Gradle wrapper** ensures everyone working with the project is using the
+  same version of gradle.
   
 ---
-## Common troubles
+## Common Challenges
+In this section, we would highlight some common challenges that may be associated with setting the gradle project
+as described above:
++ The gradle V command returns an error even when gradle is installed. In that case, ensure thta is has been
+  added to the systems path correctly.
++ Unfamiliarity with command line. If you are not familiar with command line, please refer to 
+  [Command line basics](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line).
++ The number of generated files may be overwhelming, especially for newcomers. Knowing which files are crucial and their purposes is essential.
 
 ---
 ## Further Studies
+For further studies on gradle and just in general questions on how to get around with using gradle, please
+refer to [Gradle docs](https://docs.gradle.org/current/userguide/gradle_basics.html)

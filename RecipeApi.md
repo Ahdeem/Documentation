@@ -8,6 +8,8 @@ The Recipe API platform provides a set of endpoints for registered users to mana
 
 This documentation is intended for developers who want to integrate recipe management capabilities into their applications.
 
+---
+
 ## Endpoints
 1. Register a user
    - EndPoint: /api/recipe/register-user
@@ -76,6 +78,7 @@ This documentation is intended for developers who want to integrate recipe manag
         + Scenario 2 : Attempt to delete a recipe as a registered user who did not create it.
           ![NoSuccessWithDelete](./DeleteUnsucessful.jpg)
 
+---
           
 ## Common Error Codes:
 
@@ -85,6 +88,7 @@ This documentation is intended for developers who want to integrate recipe manag
 | 404 Not Found    | The requested resource could not be found. |
 | 409 Conflict     | The resource already exist.                |
 
+---
 
 ## Further Information:
 For further information about this API, After starting the application, assuming its

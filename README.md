@@ -1,9 +1,11 @@
 # Welcome to My Technical Documentation Portfolio
 
 ## About Me
-Hi, I'm **Bernard Appah**, a passionate software engineer, technical writer and software documentation specialist who embraces 
-the Docs as Code approach, integrating documentation into the development workflow with tools like Git, Markdown, and CI/CD. 
-I create clear, concise, and user-friendly documentation for developers, engineers, and end-users.
+Hi, I'm **Bernard Appah**,  I'm a passionate software engineer and technical writer who loves making complex information accessible. 
+I embrace the Docs as Code approach, which means I integrate documentation right into the development process using tools 
+like Git, Markdown, and CI/CD. My goal is to create clear and user-friendly documentation that helps developers, engineers,
+and end-users understand and utilize technology more effectively.
+
 
 Explore my portfolio to see a selection of the technical documentation I've created.
 
@@ -13,6 +15,14 @@ Explore my portfolio to see a selection of the technical documentation I've crea
 ## Below you can find samples of my documentation:
 - [Api Documentation Sample](RecipeApi.md)
 - [Active Link2](anotherOne.md)
+
+---
+
+## Skills & Tools
+- **Documentation Tools**: Markdown, AsciiDoc, Swagger, JSDoc
+- **Technologies**: REST APIs, GraphQL, JSON, HTML, CSS, JavaScript, Java
+- **Content Management Systems**: GitHub Pages
+- **Version Control**: Git, GitHub, Bitbucket
 
 ---
 

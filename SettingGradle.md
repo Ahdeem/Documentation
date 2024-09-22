@@ -1,10 +1,10 @@
 # Setting up a new Gradle Project
 
 # Table of Contents
-- [Overview](#Overview)
-- [Step-by-Step guide](#Step-by-Step-Guide)
-- [Common troubles](#Common troubles)
-- [Further Studies](#Further Studies)
+- [Overview](#overview)
+- [Step-by-Step guide](#step-by-Step-Guide)
+- [Common troubles](#common-troubles)
+- [Further Studies](#further-Studies)
 
 ## Overview
 This guide would illustrate how to set up a gradle project from scratch without any

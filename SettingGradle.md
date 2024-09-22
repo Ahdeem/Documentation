@@ -3,7 +3,8 @@
 # Table of Contents
 - [Overview](#Overview)
 - [Step-by-Step guide](#Step-by-Step-Guide)
-- 
+- [Common troubles](#Common troubles)
+- [Further Studies](#Further Studies)
 
 ## Overview
 This guide would illustrate how to set up a gradle project from scratch without any
@@ -37,3 +38,7 @@ for modern frameworks.
     ```
   
 ---
+## Common troubles
+
+---
+## Further Studies
